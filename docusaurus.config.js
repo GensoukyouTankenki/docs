@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'gensoukyou-tankenki',
   tagline: 'Dinosaurs are cool',
-  url: 'https://GensoukyouTankenki.github.io',
-  baseUrl: '/docs/',
+  url: 'https://gensoutankenki.netlify.app',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
