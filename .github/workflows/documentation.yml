@@ -18,14 +18,9 @@ jobs:
           node-version: '12.x'
       - name: tests
         run: |
-          if [ -e yarn.lock ]; then
           yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npm run build
+          yarn deploy
+          
 
   gh-release:
     if: github.event_name != 'pull_request'
@@ -57,9 +52,4 @@ jobs:
           git config --global user.name "gh-actions"
           if [ -e yarn.lock ]; then
           yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npx run deploy
+          yarn deploy
